@@ -10,22 +10,24 @@ namespace Ejercicio_1
         public int X { get; set; }
         public int Y { get; set; }
 
-        public int Ganar 
+        private int _valorPuntos;
+       
+        public int ValorPuntos
         {
            get
             {
-                return Ganar;
+                return _valorPuntos;
             }
             set
             {
-                if (value == 100)
+                if (value >= 100)
                 {
-                    Ganar = value;
+                    _valorPuntos = value;
 
                 }
                 else
                 {
-                    throw new Exception("");
+                    throw new Exception("El valor tiene que ser mayor a 100");
                 }
                    
             }
